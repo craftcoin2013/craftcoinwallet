@@ -1,0 +1,15 @@
+.container {
+  @apply w-full h-full flex justify-center py-6;
+}
+
+.choice {
+  @apply flex flex-col text-base w-full px-6 gap-3;
+
+  .choiceDiv {
+    @apply w-full flex justify-center flex-col items-center;
+
+    .variant {
+      @apply border-none transition-colors hover:bg-text hover:text-bg pl-5 py-4 cursor-pointer w-full;
+    }
+  }
+}

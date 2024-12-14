@@ -1,0 +1,70 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+
+      - name: Get Version Name
+        uses: actions/github-script@v3
+        id: get-version
+        with:
+          script: |
+            const str=process.env.GITHUB_REF;
+            return str.substring(str.indexOf("v") + 1);
+          result-encoding: string
+
+      - name: Build Extension
+        run: |
+          yarn chrome
+          yarn firefox
+
+      - name: Zip Extension
+        run: |
+          cd dist
+          zip -r chrome-v${{steps.get-version.outputs.result}}.zip chrome
+          zip -r firefox-v${{steps.get-version.outputs.result}}.zip firefox
+          cd ..
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Firefox Asset
+        id: upload_firefox
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: dist/firefox-v${{steps.get-version.outputs.result}}.zip
+          asset_name: firefox-v${{steps.get-version.outputs.result}}.zip
+          asset_content_type: application/zip
+
+      - name: Upload Chrome Asset
+        id: upload_chrome
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: dist/chrome-v${{steps.get-version.outputs.result}}.zip
+          asset_name: chrome-v${{steps.get-version.outputs.result}}.zip
+          asset_content_type: application/zip

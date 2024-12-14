@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  @apply m-0 p-0 outline-none;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @apply mx-auto bg-bg text-text standard:max-w-2xl standard:py-6 min-w-[350px] min-h-[600px];
+
+  font-family: "Montserrat", sans-serif;
+}
+
+body.lock {
+  @apply overflow-hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form {
+  @apply w-full flex flex-col gap-6 px-6;
+}
+
+.form-title {
+  @apply p-0 mx-auto text-xl standard:pt-5;
+}
+
+.form-field {
+  @apply w-full flex flex-col gap-1;
+
+  .input {
+    @apply text-sm;
+  }
+}
+
+.btn {
+  @apply px-7 py-2 text-sm rounded-xl font-medium cursor-pointer shadow-sm text-center;
+
+  &:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+}
+
+.bottom-btn {
+  @apply flex text-xs gap-2 items-center uppercase tracking-widest justify-center h-11 font-light text-gray-100 font-mono mx-auto py-3 border-t border-neutral-700 fixed standard:relative bottom-0 right-0 left-0 transition-colors w-full text-center disabled:cursor-wait bg-bg;
+}
+
+.primary {
+  @apply text-text border border-text transition-colors hover:bg-text hover:text-bg leading-tight;
+}
+
+.secondary {
+  @apply bg-secondary;
+}
+
+.input {
+  @apply py-2 pl-5 pr-10 text-base text-text bg-input-bg rounded-xl standard:bg-bg;
+}
+
+.app {
+  @apply h-full min-h-screen flex justify-center items-center w-full standard:bg-input-bg standard:rounded-2xl overflow-x-hidden standard:min-h-max standard:pb-6 max-standard:max-w-full;
+
+  .main-route {
+    @apply w-full flex justify-center;
+  }
+
+  .toast {
+    @apply bg-neutral-700 text-text text-sm rounded-2xl;
+
+    // &.success {
+    //   @apply border-green-600;
+    // }
+    // &.error {
+    //   @apply border-red-600;
+    // }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.2rem;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-500 rounded-xl;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-100;
+}
+
+.profile-card {
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  &-face {
+    @apply bg-input-bg;
+    transition: all 0.8s ease;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+
+  &-back {
+    transform: rotateY(180deg);
+  }
+
+  &:hover {
+    & .profile-card-front {
+      transform: rotateY(-180deg);
+    }
+
+    & .profile-card-back {
+      transform: rotateY(0);
+    }
+  }
+}
+
+.inscription-card {
+  @apply w-[318px] h-[318px];
+}
+
+.input-span {
+  @apply uppercase text-gray-400 my-1;
+}

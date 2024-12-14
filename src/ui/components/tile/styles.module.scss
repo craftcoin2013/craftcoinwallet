@@ -1,0 +1,35 @@
+.card {
+  @apply cursor-pointer flex items-center gap-4 px-3 border rounded-xl bg-neutral-950 border-neutral-800 transition-colors text-lg py-3;
+
+  &:hover {
+    @apply bg-neutral-900 border-green-400/50;
+
+    .iconContainer {
+      @apply bg-green-400/90 text-black;
+    }
+  }
+}
+
+.label {
+  @apply text-sm font-medium;
+}
+
+.description {
+  @apply text-xs text-neutral-500;
+}
+
+.content {
+  @apply flex gap-1.5 flex-col;
+}
+
+.iconContainer {
+  @apply bg-neutral-900 rounded-lg p-1;
+
+  > * {
+    @apply p-1;
+  }
+}
+
+.selected {
+  @apply bg-green-400/5 border-green-400;
+}

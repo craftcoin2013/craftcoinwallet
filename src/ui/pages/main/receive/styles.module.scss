@@ -1,0 +1,21 @@
+.receive {
+  @apply h-full pt-4 gap-6 flex flex-col justify-between;
+}
+
+.accTitle {
+  @apply text-lg mx-auto mb-3 text-center font-medium;
+}
+
+.copyButton {
+  svg {
+    @apply hidden;
+  }
+}
+
+.container {
+  @apply flex items-center flex-col gap-3 p-3 h-3/4 justify-center;
+
+  @media screen and (min-width: 420px) {
+    @apply h-full;
+  }
+}

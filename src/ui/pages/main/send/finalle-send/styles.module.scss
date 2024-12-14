@@ -1,0 +1,31 @@
+.container {
+  @apply text-sm flex-col h-full flex items-center w-full;
+}
+
+.btn {
+  @apply w-full border-none font-medium text-sm text-center border-t border-neutral-700 py-3 first:border-r last:border-l;
+
+  &Container {
+    @apply flex items-center w-full fixed bottom-0 right-0 left-0;
+
+    > * {
+      @apply px-0 w-full;
+    }
+  }
+}
+
+.result {
+  @apply text-center font-medium text-base;
+
+  &Container {
+    @apply flex flex-col gap-4 justify-center mb-16 mt-36;
+  }
+
+  &Icon {
+    &Container {
+      @apply rounded-full bg-gradient-to-tr from-green-500 to-emerald-400;
+    }
+
+    @apply w-28 h-28 text-bg p-3;
+  }
+}

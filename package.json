@@ -1,0 +1,103 @@
+{
+  "name": "craftcoinwallet",
+  "version": "0.1.1",
+  "description": "The only wallet you need to store, send and receive CraftCoin!",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "bun build.ts --watch",
+    "fire": "bun build.ts --watch --firefox",
+    "chrome": "bun build.ts",
+    "firefox": "bun build.ts --firefox",
+    "both": "rm -rf dist && bun build.ts --firefox && bun build.ts",
+    "release": "rm -rf dist && bun build.ts --firefox -c && bun build.ts -c",
+    "sourcemap": "bun build.ts --sourcemap"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@headlessui/react": "2.1.2",
+    "@heroicons/react": "2.1.5",
+    "@noble/hashes": "1.4.0",
+    "@react-three/drei": "^9.115.0",
+    "@react-three/fiber": "^8.17.10",
+    "bells-inscriber": "^0.2.5",
+    "classnames": "2.5.1",
+    "dayjs": "^1.11.13",
+    "eth-rpc-errors": "4.0.3",
+    "events": "^3.3.0",
+    "i18next": "23.12.2",
+    "immer": "^10.1.1",
+    "koa-compose": "4.1.0",
+    "craftcoin-ord-utils-v0.0.1": "^0.0.1",
+    "craftcoinhdw": "^0.0.2",
+    "craftcoinjs-lib": "^0.0.2",
+    "craftcoinpair": "^0.0.2",
+    "nintondo-bip39": "^1.0.0",
+    "nintondo-browser-passworder": "^0.0.1",
+    "nintondo-sdk": "^0.1.15",
+    "qr-code-styling": "1.6.0-rc.1",
+    "rc-progress": "4.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.52.2",
+    "react-hot-toast": "2.4.1",
+    "react-intersection-observer": "9.13.0",
+    "react-loading-icons": "1.1.0",
+    "react-router": "^6.27.0",
+    "react-router-dom": "6.26.0",
+    "reflect-metadata": "0.2.2",
+    "string_decoder": "^1.3.0",
+    "three": "^0.170.0",
+    "webextension-polyfill": "^0.12.0",
+    "zustand": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1",
+    "@types/chrome": "^0.0.270",
+    "@types/koa-compose": "^3.2.8",
+    "@types/node": "^22.1.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@types/webextension-polyfill": "^0.12.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "autoprefixer": "^10.4.20",
+    "bun": "^1.1.33",
+    "bun-types": "^1.1.21",
+    "esbuild": "^0.23.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-plugin-svg": "^0.1.0",
+    "esbuild-plugin-svgj": "^1.0.3",
+    "esbuild-plugin-wasm": "^1.1.0",
+    "esbuild-plugins-node-modules-polyfill": "^1.6.3",
+    "esbuild-sass-plugin": "^3.3.1",
+    "esbuild-svg": "^1.0.3",
+    "eslint": "^9.8.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss-modules": "^6.0.0",
+    "sass": "^1.69.7",
+    "sass-loader": "^16.0.0",
+    "svgo": "^3.2.0",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
