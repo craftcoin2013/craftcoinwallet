@@ -78,45 +78,38 @@ class ApiController implements IApiController {
     const utxos = await res.json();
     if (!utxos || !Array.isArray(utxos)) return undefined;
 
-    const utxosWithHex: ApiUTXO[] = await Promise.all(
-      utxos.map(async (utxo) => {
-        return {
-          txid: utxo.txid,
-          vout: utxo.vout,
-          status: utxo.status,
-          value: utxo.value,
-          hex: utxo.raw,
-        };
-      })
-    );
+    const utxosWithoutHex: ApiUTXO[] = utxos.map((utxo) => ({
+      txid: utxo.txid,
+      vout: utxo.vout,
+      status: utxo.status,
+      value: utxo.value,
+      hex: undefined,
+    }));
 
     if (amount) {
       let MatchedUTXOsAmount: ApiUTXO[] = [];
-
       let BalanceTrack = 0;
 
-      for (const utxo of utxosWithHex) {
-        //sum balance in matchedAmount utxos
-        // const BalanceInUTXO = MatchedUTXOsAmount.reduce(
-        //   (a, b) => a + b.value,
-        //   0
-        // );
+      const sortedUtxos = [...utxosWithoutHex].sort(
+        (a, b) => b.value - a.value
+      );
 
-        // if the required amount matched the balance in UTXOs break the loop
-
-        if (BalanceTrack > amount) break;
-
-        BalanceTrack += utxo.value;
+      for (const utxo of sortedUtxos) {
         MatchedUTXOsAmount.push(utxo);
+        BalanceTrack += utxo.value;
+
+        // Break if we have enough balance
+        if (BalanceTrack >= amount) break;
       }
 
-      // insuffient balance
-      if (amount < BalanceTrack) return undefined;
+      // Return undefined if we don't have enough balance
+      if (BalanceTrack < amount) return undefined;
 
       return MatchedUTXOsAmount;
     }
 
-    return utxosWithHex;
+    // fetch hex for all UTXOs
+    return utxosWithoutHex;
   }
 
   async pushTx(txHex: string) {
@@ -247,11 +240,14 @@ class ApiController implements IApiController {
   }
 
   async getTransactionHex(txid: string) {
-    return await this.fetch<string>({
-      path: "/tx/" + txid + "/hex",
-      json: false,
-      service: "content",
-    });
+    try {
+      const res = await fetch(`${API_URL}/tx/${txid}/hex`);
+      if (!res.ok) return undefined;
+      return await res.text();
+    } catch (error) {
+      console.error(`Failed to fetch hex for txid ${txid}:`, error);
+      return undefined;
+    }
   }
 
   async getUtxoValues(outpoints: string[]) {

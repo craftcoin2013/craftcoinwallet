@@ -4,7 +4,7 @@ import { INewWalletProps } from "@/shared/interfaces";
 //import { ApiOrdUTXO, OrdUTXO } from "@/shared/interfaces/inscriptions";
 import { DEFAULT_TYPE } from "@/shared/constant";
 import { getScriptForAddress, toXOnly } from "@/shared/utils/transactions";
-import { createSendCRC } from "craftcoin-ord-utils-v0.0.1";
+import { createSendCRC } from "../../../../../craftcoin-ord-utils/lib";
 import { AddressType, HDPrivateKey, SimpleKey } from "craftcoinhdw";
 import HDSimpleKey from "craftcoinhdw/src/hd/simple";
 import type { Keyring } from "craftcoinhdw/src/hd/types";
@@ -210,7 +210,6 @@ class KeyringService {
           scriptPk: scriptPk.toString("hex"),
           addressType: wallet?.addressType,
           address: account.address!,
-          rawHex: v.hex,
           ords: [],
         };
       }),

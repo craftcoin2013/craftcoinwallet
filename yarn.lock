@@ -1610,10 +1610,10 @@ cosmiconfig@^8.1.3:
     parse-json "^5.2.0"
     path-type "^4.0.0"
 
-craftcoin-ord-utils-v0.0.1@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/craftcoin-ord-utils-v0.0.1/-/craftcoin-ord-utils-v0.0.1-0.0.1.tgz"
-  integrity sha512-o1h39BAa/4sLGbimGz+h1gGlhqWEapXrloK6Oa7xEGr1WFGysvwq5yrgQEFjjrGPlydrTTdxclFSxgjHJqAqTA==
+craftcoin-ord-utils@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/craftcoin-ord-utils/-/craftcoin-ord-utils-0.0.2.tgz"
+  integrity sha512-54TM3nKCwSorIJ8BF+m5fYJ2xahtG9F1ER6rPUkDrZyTnrSk4Q94W9fuMRZIZ7XkoDkSxg5d9TlKpzPsswYDdg==
   dependencies:
     bn.js "5.2.1"
     bs58check "2.1.2"
