@@ -111,7 +111,7 @@ class ApiController implements IApiController {
       }
 
       // insuffient balance
-      if (amount !== BalanceTrack) return undefined;
+      if (amount < BalanceTrack) return undefined;
 
       return MatchedUTXOsAmount;
     }
