@@ -71,13 +71,7 @@ class ApiController implements IApiController {
     address: string,
     amount?: number
   ): Promise<ApiUTXO[] | undefined> {
-    let res;
-
-    if (amount) {
-      res = await fetch(`${API_URL}/address/${address}/fetch-utxos/${amount}`);
-    } else {
-      res = await fetch(`${API_URL}/address/${address}/utxo`);
-    }
+    let res = await fetch(`${API_URL}/address/${address}/utxo`);
 
     if (!res.ok) return undefined;
 
@@ -95,6 +89,32 @@ class ApiController implements IApiController {
         };
       })
     );
+
+    if (amount) {
+      let MatchedUTXOsAmount: ApiUTXO[] = [];
+
+      let BalanceTrack = 0;
+
+      for (const utxo of utxosWithHex) {
+        //sum balance in matchedAmount utxos
+        // const BalanceInUTXO = MatchedUTXOsAmount.reduce(
+        //   (a, b) => a + b.value,
+        //   0
+        // );
+
+        // if the required amount matched the balance in UTXOs break the loop
+
+        if (BalanceTrack > amount) break;
+
+        BalanceTrack += utxo.value;
+        MatchedUTXOsAmount.push(utxo);
+      }
+
+      // insuffient balance
+      if (amount !== BalanceTrack) return undefined;
+
+      return MatchedUTXOsAmount;
+    }
 
     return utxosWithHex;
   }
@@ -161,17 +181,19 @@ class ApiController implements IApiController {
   }
 
   async getCRCPrice() {
-    const res = await fetch('https://explorer.craftcoin.info/ext/getcurrentprice');
-    
+    const res = await fetch(
+      "https://explorer.craftcoin.info/ext/getcurrentprice"
+    );
+
     if (!res.ok) {
       return undefined;
     }
-  
-    const data = await res.json() as {
-      last_price_usdt: number;  
+
+    const data = (await res.json()) as {
+      last_price_usdt: number;
       last_price_usd: number;
     };
-  
+
     return {
       usd: data.last_price_usdt,
     };
