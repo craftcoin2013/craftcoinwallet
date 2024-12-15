@@ -1,6 +1,6 @@
 {
   "name": "craftcoinwallet",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "The only wallet you need to store, send and receive CraftCoin!",
   "private": true,
   "scripts": {
@@ -45,7 +45,7 @@
     "i18next": "23.12.2",
     "immer": "^10.1.1",
     "koa-compose": "4.1.0",
-    "craftcoin-ord-utils": "^0.0.2",
+    "craftcoin-ord-utils": "^0.1.0",
     "craftcoinhdw": "^0.0.2",
     "craftcoinjs-lib": "^0.0.2",
     "craftcoinpair": "^0.0.2",
