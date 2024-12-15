@@ -6,7 +6,7 @@ The only wallet you need to store, send, and receive CraftCoin!
 
 ## Downloading Prebuilt Releases
 
-For an easy setup, check the [Releases](https://github.com/CraftCoinProj/craftcoinwallet/releases) section on GitHub. Prebuilt ZIP files are available for both Chrome and Firefox, so you can get started without building the project. Here’s how:
+For an easy setup, check the [Releases](https://github.com/craftcoin2013/craftcoinwallet/releases) section on GitHub. Prebuilt ZIP files are available for both Chrome and Firefox, so you can get started without building the project. Here’s how:
 
 1. **Download** the latest release ZIP file for **Chrome** or **Firefox** from the Releases section.
 2. **Extract** the ZIP file to a convenient location on your device.
@@ -64,4 +64,4 @@ yarn install
 
 ---
 
-Special thanks to [NintondoWallet](https://github.com/nintondo/extension) ❤️
+Special thanks to [NintondoWallet](https://github.com/nintondo/extension) and [LuckycoinWallet](https://github.com/LuckyCoinProj/luckycoinwallet) ❤️
