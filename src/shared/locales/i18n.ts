@@ -2,6 +2,7 @@ import en from "./languages/en.json";
 import ru from "./languages/ru.json";
 import ch from "./languages/ch.json";
 import kr from "./languages/kr.json";
+import vi from "./languages/vi.json";
 import i18n from "i18next";
 
 export const defaultNS = "  ";
@@ -18,6 +19,9 @@ export const resources = {
   },
   kr: {
     translation: kr,
+  },
+  vi: {
+    translation: vi,
   },
 };
 
@@ -47,7 +51,7 @@ export function getLanguages() {
     ru: "Russian",
     tl: "Filipino",
     tr: "Turkish",
-    vi: "Vietnamese",
+    vi: "Tiếng Việt",
     zh: "Chinese - China",
   };
 }

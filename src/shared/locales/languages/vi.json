@@ -1,0 +1,319 @@
+{
+  "wallet_page": {
+    "transactions": "Giao dịch",
+    "no_transactions": "Không có giao dịch",
+    "no_inscriptions": "Không có inscriptions",
+    "receive": "Nhận",
+    "send": "Gửi",
+    "nft": "NFT",
+    "available_balance": "Số dư khả dụng"
+  },
+  "settings": {
+    "language": "Ngôn ngữ",
+    "logout": "Đăng xuất",
+    "connected_sites": "Trang web đã kết nối",
+    "expand_view": "Mở rộng",
+    "security_settings": "Cài đặt bảo mật",
+    "address_type": "Loại địa chỉ"
+  },
+  "components": {
+    "layout": {
+      "create_new_wallet": "Tạo ví mới",
+      "send": "Gửi",
+      "connected_sites": "Trang web đã kết nối",
+      "change_language": "Thay đổi ngôn ngữ",
+      "switch_account": "Chuyển đổi tài khoản",
+      "change_address_type": "Thay đổi loại địa chỉ",
+      "create_new_account": "Tạo tài khoản mới",
+      "change_password": "Đổi mật khẩu",
+      "network_settings": "Cài đặt mạng",
+      "receive_crc": "Nhận CRC",
+      "switch_wallet": "Chuyển đổi ví",
+      "transaction_info": "Thông tin giao dịch",
+      "settings": "Cài đặt",
+      "show_mnemonic": "Hiển thị mnemonic",
+      "show_private_key": "Hiển thị khóa riêng tư",
+      "restore_from_mnemonic": "Khôi phục từ mnemonic",
+      "restore_from_private_key": "Khôi phục từ khóa riêng tư",
+      "security": "Bảo mật",
+      "discover": "Khám phá",
+      "inscriptions": "Inscriptions",
+      "wallet_settings": "Cài đặt ví"
+    },
+    "check_password": {
+      "incorrect_password_error": "Mật khẩu không chính xác",
+      "password": "Mật khẩu",
+      "continue": "Tiếp tục"
+    },
+    "password_input": {
+      "should_be_more_than_1_symbol": "Phải nhiều hơn 1 ký tự",
+      "should_be_less_than_70_symbols": "Phải ít hơn 70 ký tự"
+    },
+    "rename": {
+      "enter_new_name": "Nhập tên mới",
+      "minimum_length": "Độ dài tối thiểu là 1",
+      "maximum_length": "Độ dài tối đa là 16",
+      "name_is_required": "Tên là bắt buộc",
+      "save": "Lưu",
+      "rename": "Đổi tên"
+    },
+    "card": {
+      "close": "Đóng",
+      "root_account": "Tài khoản gốc"
+    },
+    "inscription_card": {
+      "modal_title": "Inscription",
+      "id": "Id",
+      "address": "Địa chỉ",
+      "outputValue": "Giá trị đầu ra",
+      "content": "Nội dung",
+      "contentLength": "Độ dài nội dung",
+      "contentType": "Loại nội dung",
+      "timeStamp": "Thời gian",
+      "genesisHeight": "Chiều cao genesis",
+      "genesisFee": "Phí genesis",
+      "genesisTransaction": "Giao dịch genesis",
+      "location": "Vị trí",
+      "output": "Đầu ra",
+      "offset": "Offset",
+      "preview": "Xem trước"
+    },
+    "token_card": {
+      "transferable_balance": "Số dư có thể chuyển",
+      "balance": "Số dư",
+      "create_transfer": "Tạo chuyển khoản",
+      "send": "Gửi",
+      "no_transfers": "Không có chuyển khoản"
+    }
+  },
+  "change_password": {
+    "old_password": "Mật khẩu cũ",
+    "new_password": "Mật khẩu mới",
+    "confirm_password": "Xác nhận mật khẩu",
+    "change_password": "Đổi mật khẩu",
+    "errors": {
+      "incorrect_password": "Mật khẩu không chính xác",
+      "passwords_do_not_match": "Mật khẩu không khớp"
+    }
+  },
+  "connected_sites": {
+    "no_sites_message": "Bạn chưa kết nối với trang web nào"
+  },
+  "create_password": {
+    "password": "Mật khẩu",
+    "confirm_password": "Xác nhận mật khẩu",
+    "create_password": "Tạo mật khẩu"
+  },
+  "login": {
+    "password": "Mật khẩu",
+    "login": "Đăng nhập",
+    "welcome_back": "Chào mừng trở lại"
+  },
+  "new_account": {
+    "max_length_error": "Độ dài tên tối đa là 16",
+    "name_taken_error": "Tên này đã được sử dụng",
+    "account_created_message": "Đã tạo tài khoản mới",
+    "enter_name_label": "Nhập tên:",
+    "create_new_account": "Tạo tài khoản mới"
+  },
+  "new_wallet": {
+    "new_mnemonic_label": "Mnemonic mới",
+    "restore_mnemonic_label": "Khôi phục mnemonic",
+    "restore_from_private_key_label": "Khôi phục từ khóa riêng tư",
+    "restore_from_label": "Khôi phục từ",
+    "step_1": "Bước 1",
+    "step_2": "Bước 2",
+    "continue": "Tiếp tục",
+    "new_mnemonic": {
+      "error_phrase_blank": "Cụm từ mnemonic trống",
+      "warning": "Nếu bạn mất những từ này, bạn sẽ không thể khôi phục tài khoản đã mất",
+      "i_saved_this_phrase": "Tôi đã lưu cụm từ này",
+      "copy": "Sao chép"
+    },
+    "restore_mnemonic": {
+      "incomplete_phrase_error": "Vui lòng nhập tất cả các từ",
+      "invalid_words_error": "Các từ không hợp lệ",
+      "show_root_acc": "Sử dụng dẫn xuất legacy"
+    },
+    "restore_private": {
+      "private_key": "Khóa riêng tư",
+      "recover": "Khôi phục",
+      "invalid_private_key_error": "Khóa riêng tư không hợp lệ"
+    },
+    "hd_path": "Đường dẫn HD"
+  },
+  "receive": {
+    "click_to_copy": "Nhấp để sao chép",
+    "copy_address": "Sao chép địa chỉ"
+  },
+  "send": {
+    "confirm_send": {
+      "to_addrses": "Đến địa chỉ",
+      "from_address": "Từ địa chỉ",
+      "amount": "Số lượng",
+      "fee": "Phí",
+      "included": "đã bao gồm",
+      "not_included": "chưa bao gồm",
+      "confirm": "Xác nhận",
+      "inscription_id": "ID Inscription"
+    },
+    "create_send": {
+      "minimum_amount_error": "Số lượng tối thiểu là 0.00000001 CRC",
+      "fee_exceeds_amount_error": "Phí vượt quá số lượng",
+      "address_error": "Nhập địa chỉ người nhận",
+      "not_enough_money_error": "Không đủ tiền trong tài khoản của bạn",
+      "not_enough_fee_error": "Tăng phí",
+      "fee_is_text_error": "Phí phải là số nguyên",
+      "default_error": "Đã xảy ra lỗi",
+      "address": "Địa chỉ",
+      "amount": "Số lượng",
+      "amount_to_send": "Số lượng gửi",
+      "max_amount": "TỐI ĐA",
+      "fee_label": "Phí",
+      "include_fee_in_the_amount_label": "Bao gồm phí trong số lượng",
+      "save_address_for_the_next_payments_label": "Lưu địa chỉ cho các lần thanh toán tiếp theo",
+      "continue": "Tiếp tục",
+      "fee_input": {
+        "fast": "Nhanh",
+        "slow": "Chậm",
+        "custom": "Tùy chỉnh"
+      },
+      "address_input": {
+        "address_book": "Sổ địa chỉ",
+        "address_placeholder": "Địa chỉ người nhận"
+      },
+      "address_book": {
+        "address_book": "Sổ địa chỉ",
+        "no_addresses": "Không có địa chỉ nào",
+        "enter_address": "Nhập địa chỉ"
+      }
+    },
+    "finalle_send": {
+      "success": "Thành công",
+      "explorer": "Trình duyệt",
+      "back": "Quay lại",
+      "rebroadcast_transaction": "Phát lại giao dịch",
+      "successfully_rebroadcasted": "Đã phát lại giao dịch thành công"
+    }
+  },
+  "switch_account": {
+    "name_already_taken_error": "Tên này đã được sử dụng",
+    "copy_address": "Sao chép địa chỉ",
+    "rename_account": "Đổi tên tài khoản",
+    "export_private_key": "Xuất khóa riêng tư",
+    "show_pk": {
+      "copy": "Sao chép"
+    }
+  },
+  "switch_wallet": {
+    "rename_wallet": "Đổi tên ví",
+    "show_mnemonic_private_key": "Hiển thị mnemonic",
+    "last_wallet_error": "Bạn không thể xóa ví cuối cùng",
+    "remove_wallet": "Xóa ví",
+    "are_you_sure": "Bạn có chắc chắn muốn xóa không?",
+    "yes": "Có",
+    "no": "Không",
+    "copy": "Sao chép"
+  },
+  "transaction_info": {
+    "txid": "ID Giao dịch",
+    "confirmations_label": "Xác nhận",
+    "confirmed": "Đã xác nhận",
+    "unconfirmed": "Chưa xác nhận",
+    "fee_label": "Phí",
+    "value_label": "Giá trị",
+    "open_in_explorer": "Mở trong trình duyệt",
+    "copied": "Đã sao chép",
+    "inputs": "Đầu vào",
+    "outputs": "Đầu ra",
+    "details": "Chi tiết",
+    "your_address": "Bạn"
+  },
+  "hooks": {
+    "transaction": {
+      "insufficient_balance_0": "Số dư không đủ. Số dư không phải Inscription",
+      "insufficient_balance_1": "CRC) thấp hơn",
+      "insufficient_balance_2": "CRC",
+      "too_many_utxos": "Quá nhiều UTXO. Bạn phải hợp nhất chúng hoặc sử dụng số lượng nhỏ hơn để gửi",
+      "too_long_mempool_chain": "Chuỗi mempool quá dài. Bạn phải đợi cho đến khi nó được xác nhận"
+    },
+    "wallet": {
+      "last_wallet_error": "Bạn không thể xóa ví cuối cùng"
+    }
+  },
+  "advanced": {
+    "root_acc_warning": "Sử dụng dẫn xuất legacy",
+    "blank": "Không có gì ở đây cho loại ví của bạn"
+  },
+  "inscription_details": {
+    "content_length": "Độ dài nội dung",
+    "status.block_height": "Chiều cao khối",
+    "content_type": "Loại nội dung",
+    "genesis": "Genesis",
+    "preview": "Xem trước",
+    "content": "Nội dung",
+    "offset": "Offset",
+    "owner": "Chủ sở hữu",
+    "value": "Giá trị",
+    "outpoint": "Outpoint",
+    "inscription_id": "ID inscription",
+    "status.block_time": "Thời gian",
+    "title": "Inscription",
+    "inscription_number": "Số inscription"
+  },
+  "inscriptions": {
+    "inscription_not_found": "Không tìm thấy inscription",
+    "tokens_not_found": "Không tìm thấy token",
+    "inscription_search_placeholder": "Số/ID inscription",
+    "token_search_placeholder": "Tên token",
+    "mint_token_modal_title": "Tạo token chuyển khoản",
+    "send_token_modal_title": "Gửi token",
+    "amount_to_mint": "Số lượng để tạo",
+    "transfers_count": "Số lượng chuyển khoản",
+    "amount_is_text_error": "Số lượng phải là số nguyên",
+    "transfer_count_is_text_error": "Số lượng chuyển khoản phải là số nguyên",
+    "amount_cannot_be_fractional": "Số lượng không thể là phân số",
+    "transfer_countcannot_be_fractional": "Số lượng chuyển khoản không thể là phân số",
+    "amount_exceeds_balance": "Số lượng vượt quá số dư",
+    "transfer_inscribed": "Đã tạo chuyển khoản thành công",
+    "failed_inscribe_transfer": "Không thể tạo chuyển khoản",
+    "failed_inscribe_transfer2": "Các giao dịch này sẽ được đẩy sau",
+    "choose_transfer": "Chọn chuyển khoản để gửi",
+    "total_amount": "Tổng số lượng",
+    "0_selected_inscriptions_error": "0 inscription được chọn",
+    "success_send_transfer": "Đã gửi chuyển khoản thành công",
+    "failed_send_transfer": "Không thể gửi chuyển khoản",
+    "inscribe": "Tạo inscription",
+    "transfer": "chuyển khoản",
+    "not_enough_balance": "Không đủ số dư",
+    "not_enough_token_balance": "Số dư token không đủ",
+    "minimum_transfer_count": "Số lượng chuyển khoản tối thiểu là 1",
+    "minimum_amount_error": "Số lượng token tối thiểu là 1",
+    "input_amount_first": "Nhập số lượng trước",
+    "tick_is_not_set": "Tick chưa được định nghĩa"
+  },
+  "provider": {
+    "sign_tx": "Ký giao dịch",
+    "sign_message": "Ký tin nhắn",
+    "you_are_signing": "Bạn đang ký",
+    "resolve": "Giải quyết",
+    "reject": "Từ chối",
+    "sign_request": "Yêu cầu ký",
+    "send_crc": "Gửi CRC",
+    "sign": "Ký",
+    "create_transaction": "Tạo giao dịch",
+    "connecting": "Đang kết nối",
+    "connect": "Kết nối",
+    "access_required": "Yêu cầu truy cập",
+    "to_address": "Đến địa chỉ",
+    "connecting_account": "Đang kết nối tài khoản",
+    "warning": "Cảnh báo",
+    "anyone_can_pay_warning": "Input này có cờ SIGHASH_SINGLE | ANYONECANPAY",
+    "multi_psbt_sign": "Ký các giao dịch",
+    "fee": "Phí",
+    "switch": "Chuyển đổi",
+    "switch_network": "Trang web muốn bạn chuyển mạng của bạn sang",
+    "switch_network_title": "Chuyển đổi mạng",
+    "switch_network_request": "Yêu cầu chuyển đổi mạng"
+  }
+}
