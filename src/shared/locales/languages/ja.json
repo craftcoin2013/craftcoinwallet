@@ -1,0 +1,319 @@
+{
+  "wallet_page": {
+    "transactions": "取引",
+    "no_transactions": "取引なし",
+    "no_inscriptions": "インスクリプションなし",
+    "receive": "受け取る",
+    "send": "送る",
+    "nft": "NFT",
+    "available_balance": "利用可能残高"
+  },
+  "settings": {
+    "language": "言語",
+    "logout": "ログアウト",
+    "connected_sites": "接続済みサイト",
+    "expand_view": "表示を拡大",
+    "security_settings": "セキュリティ設定",
+    "address_type": "アドレスタイプ"
+  },
+  "components": {
+    "layout": {
+      "create_new_wallet": "新しいウォレットを作成",
+      "send": "送る",
+      "connected_sites": "接続済みサイト",
+      "change_language": "言語を変更",
+      "switch_account": "アカウントを切り替え",
+      "change_address_type": "アドレスタイプを変更",
+      "create_new_account": "新しいアカウントを作成",
+      "change_password": "パスワードを変更",
+      "network_settings": "ネットワーク設定",
+      "receive_crc": "CRCを受け取る",
+      "switch_wallet": "ウォレットを切り替え",
+      "transaction_info": "取引情報",
+      "settings": "設定",
+      "show_mnemonic": "ニーモニックを表示",
+      "show_private_key": "秘密鍵を表示",
+      "restore_from_mnemonic": "ニーモニックから復元",
+      "restore_from_private_key": "秘密鍵から復元",
+      "security": "セキュリティ",
+      "discover": "探す",
+      "inscriptions": "インスクリプション",
+      "wallet_settings": "ウォレット設定"
+    },
+    "check_password": {
+      "incorrect_password_error": "パスワードが正しくありません",
+      "password": "パスワード",
+      "continue": "続ける"
+    },
+    "password_input": {
+      "should_be_more_than_1_symbol": "1文字以上必要です",
+      "should_be_less_than_70_symbols": "70文字未満である必要があります"
+    },
+    "rename": {
+      "enter_new_name": "新しい名前を入力",
+      "minimum_length": "最小長は1です",
+      "maximum_length": "最大長は16です",
+      "name_is_required": "名前は必須です",
+      "save": "保存",
+      "rename": "名前を変更"
+    },
+    "card": {
+      "close": "閉じる",
+      "root_account": "ルートアカウント"
+    },
+    "inscription_card": {
+      "modal_title": "インスクリプション",
+      "id": "ID",
+      "address": "アドレス",
+      "outputValue": "出力値",
+      "content": "コンテンツ",
+      "contentLength": "コンテンツ長",
+      "contentType": "コンテンツタイプ",
+      "timeStamp": "タイムスタンプ",
+      "genesisHeight": "ジェネシス高",
+      "genesisFee": "ジェネシス手数料",
+      "genesisTransaction": "ジェネシス取引",
+      "location": "場所",
+      "output": "出力",
+      "offset": "オフセット",
+      "preview": "プレビュー"
+    },
+    "token_card": {
+      "transferable_balance": "転送可能残高",
+      "balance": "残高",
+      "create_transfer": "転送を作成",
+      "send": "送る",
+      "no_transfers": "転送なし"
+    }
+  },
+  "change_password": {
+    "old_password": "古いパスワード",
+    "new_password": "新しいパスワード",
+    "confirm_password": "パスワードを確認",
+    "change_password": "パスワードを変更",
+    "errors": {
+      "incorrect_password": "パスワードが正しくありません",
+      "passwords_do_not_match": "パスワードが一致しません"
+    }
+  },
+  "connected_sites": {
+    "no_sites_message": "まだサイトに接続していません"
+  },
+  "create_password": {
+    "password": "パスワード",
+    "confirm_password": "パスワードを確認",
+    "create_password": "パスワードを作成"
+  },
+  "login": {
+    "password": "パスワード",
+    "login": "ログイン",
+    "welcome_back": "おかえりなさい"
+  },
+  "new_account": {
+    "max_length_error": "名前の最大長は16です",
+    "name_taken_error": "このアカウントの名前は既に使用されています",
+    "account_created_message": "新しいアカウントを作成しました",
+    "enter_name_label": "名前を入力:",
+    "create_new_account": "アカウントを作成"
+  },
+  "new_wallet": {
+    "new_mnemonic_label": "新しいニーモニック",
+    "restore_mnemonic_label": "ニーモニックを復元",
+    "restore_from_private_key_label": "秘密鍵から復元",
+    "restore_from_label": "復元元",
+    "step_1": "ステップ1",
+    "step_2": "ステップ2",
+    "continue": "続ける",
+    "new_mnemonic": {
+      "error_phrase_blank": "ニーモニックフレーズが空です",
+      "warning": "これらの単語を失うと、失われたアカウントを復元できなくなります",
+      "i_saved_this_phrase": "このフレーズを保存しました",
+      "copy": "コピー"
+    },
+    "restore_mnemonic": {
+      "incomplete_phrase_error": "すべての単語を入力してください",
+      "invalid_words_error": "単語が無効です",
+      "show_root_acc": "レガシー導出を使用"
+    },
+    "restore_private": {
+      "private_key": "秘密鍵",
+      "recover": "復元",
+      "invalid_private_key_error": "無効な秘密鍵"
+    },
+    "hd_path": "HDパス"
+  },
+  "receive": {
+    "click_to_copy": "クリックしてコピー",
+    "copy_address": "アドレスをコピー"
+  },
+  "send": {
+    "confirm_send": {
+      "to_addrses": "送信先アドレス",
+      "from_address": "送信元アドレス",
+      "amount": "金額",
+      "fee": "手数料",
+      "included": "含む",
+      "not_included": "含まない",
+      "confirm": "確認",
+      "inscription_id": "インスクリプションID"
+    },
+    "create_send": {
+      "minimum_amount_error": "最小金額は0.00000001 CRCです",
+      "fee_exceeds_amount_error": "手数料が金額を超えています",
+      "address_error": "受信者のアドレスを入力",
+      "not_enough_money_error": "アカウントに十分な資金がありません",
+      "not_enough_fee_error": "手数料を増やしてください",
+      "fee_is_text_error": "手数料は整数である必要があります",
+      "default_error": "エラーが発生しました",
+      "address": "アドレス",
+      "amount": "金額",
+      "amount_to_send": "送信する金額",
+      "max_amount": "最大",
+      "fee_label": "手数料",
+      "include_fee_in_the_amount_label": "金額に手数料を含める",
+      "save_address_for_the_next_payments_label": "次回の支払いのためにアドレスを保存",
+      "continue": "続ける",
+      "fee_input": {
+        "fast": "高速",
+        "slow": "低速",
+        "custom": "カスタム"
+      },
+      "address_input": {
+        "address_book": "アドレス帳",
+        "address_placeholder": "受信者のアドレス"
+      },
+      "address_book": {
+        "address_book": "アドレス帳",
+        "no_addresses": "アドレスがありません",
+        "enter_address": "アドレスを入力"
+      }
+    },
+    "finalle_send": {
+      "success": "成功",
+      "explorer": "エクスプローラ",
+      "back": "戻る",
+      "rebroadcast_transaction": "取引を再ブロードキャスト",
+      "successfully_rebroadcasted": "取引を正常に再ブロードキャストしました"
+    }
+  },
+  "switch_account": {
+    "name_already_taken_error": "この名前は既に使用されています",
+    "copy_address": "アドレスをコピー",
+    "rename_account": "アカウント名を変更",
+    "export_private_key": "秘密鍵をエクスポート",
+    "show_pk": {
+      "copy": "コピー"
+    }
+  },
+  "switch_wallet": {
+    "rename_wallet": "ウォレット名を変更",
+    "show_mnemonic_private_key": "ニーモニックを表示",
+    "last_wallet_error": "最後のウォレットは削除できません",
+    "remove_wallet": "ウォレットを削除",
+    "are_you_sure": "本当に削除しますか？",
+    "yes": "はい",
+    "no": "いいえ",
+    "copy": "コピー"
+  },
+  "transaction_info": {
+    "txid": "取引ID",
+    "confirmations_label": "承認数",
+    "confirmed": "承認済み",
+    "unconfirmed": "未承認",
+    "fee_label": "手数料",
+    "value_label": "値",
+    "open_in_explorer": "エクスプローラで開く",
+    "copied": "コピーしました",
+    "inputs": "入力",
+    "outputs": "出力",
+    "details": "詳細",
+    "your_address": "あなた"
+  },
+  "hooks": {
+    "transaction": {
+      "insufficient_balance_0": "残高不足。非インスクリプション残高",
+      "insufficient_balance_1": "CRC）が以下より少ない",
+      "insufficient_balance_2": "CRC",
+      "too_many_utxos": "UTXOが多すぎます。統合するか、より少ない金額を送信してください",
+      "too_long_mempool_chain": "メンプールチェーンが長すぎます。承認されるまでお待ちください"
+    },
+    "wallet": {
+      "last_wallet_error": "最後のウォレットは削除できません"
+    }
+  },
+  "advanced": {
+    "root_acc_warning": "レガシー導出を使用",
+    "blank": "このウォレットタイプには何もありません"
+  },
+  "inscription_details": {
+    "content_length": "コンテンツ長",
+    "status.block_height": "ブロック高",
+    "content_type": "コンテンツタイプ",
+    "genesis": "ジェネシス",
+    "preview": "プレビュー",
+    "content": "コンテンツ",
+    "offset": "オフセット",
+    "owner": "所有者",
+    "value": "値",
+    "outpoint": "アウトポイント",
+    "inscription_id": "インスクリプションID",
+    "status.block_time": "タイムスタンプ",
+    "title": "インスクリプション",
+    "inscription_number": "インスクリプション番号"
+  },
+  "inscriptions": {
+    "inscription_not_found": "インスクリプションが見つかりません",
+    "tokens_not_found": "トークンが見つかりません",
+    "inscription_search_placeholder": "番号/インスクリプションID",
+    "token_search_placeholder": "トークン名",
+    "mint_token_modal_title": "転送トークンをミント",
+    "send_token_modal_title": "トークンを送信",
+    "amount_to_mint": "ミントする金額",
+    "transfers_count": "転送数",
+    "amount_is_text_error": "金額は整数である必要があります",
+    "transfer_count_is_text_error": "転送数は整数である必要があります",
+    "amount_cannot_be_fractional": "金額は分数にできません",
+    "transfer_countcannot_be_fractional": "転送数は分数にできません",
+    "amount_exceeds_balance": "金額が残高を超えています",
+    "transfer_inscribed": "転送を正常にインスクライブしました",
+    "failed_inscribe_transfer": "転送の作成に失敗しました",
+    "failed_inscribe_transfer2": "これらの取引は後で送信されます",
+    "choose_transfer": "送信する転送を選択",
+    "total_amount": "合計金額",
+    "0_selected_inscriptions_error": "0個のインスクリプションが選択されています",
+    "success_send_transfer": "転送を正常に送信しました",
+    "failed_send_transfer": "転送の送信に失敗しました",
+    "inscribe": "インスクライブ",
+    "transfer": "転送",
+    "not_enough_balance": "残高不足",
+    "not_enough_token_balance": "トークン残高不足",
+    "minimum_transfer_count": "最小転送数は1です",
+    "minimum_amount_error": "最小トークン金額は1です",
+    "input_amount_first": "最初に金額を入力してください",
+    "tick_is_not_set": "ティックが設定されていません"
+  },
+  "provider": {
+    "sign_tx": "取引に署名",
+    "sign_message": "メッセージに署名",
+    "you_are_signing": "署名中",
+    "resolve": "解決",
+    "reject": "拒否",
+    "sign_request": "署名リクエスト",
+    "send_crc": "CRCを送信",
+    "sign": "署名",
+    "create_transaction": "取引を作成",
+    "connecting": "接続中",
+    "connect": "接続",
+    "access_required": "アクセスが必要です",
+    "to_address": "送信先アドレス",
+    "connecting_account": "アカウントを接続中",
+    "warning": "警告",
+    "anyone_can_pay_warning": "この入力にはSIGHASH_SINGLE | ANYONECANPAYフラグがあります",
+    "multi_psbt_sign": "取引に署名",
+    "fee": "手数料",
+    "switch": "切り替え",
+    "switch_network": "ウェブサイトがネットワークの切り替えを要求しています",
+    "switch_network_title": "ネットワークを切り替え",
+    "switch_network_request": "ネットワーク切り替えリクエスト"
+  }
+}

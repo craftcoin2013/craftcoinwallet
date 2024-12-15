@@ -1,0 +1,319 @@
+{
+  "wallet_page": {
+    "transactions": "लेन-देन",
+    "no_transactions": "कोई लेन-देन नहीं",
+    "no_inscriptions": "कोई इंस्क्रिप्शन नहीं",
+    "receive": "प्राप्त करें",
+    "send": "भेजें",
+    "nft": "NFT",
+    "available_balance": "उपलब्ध बैलेंस"
+  },
+  "settings": {
+    "language": "भाषा",
+    "logout": "लॉग आउट",
+    "connected_sites": "कनेक्टेड साइट्स",
+    "expand_view": "विस्तृत दृश्य",
+    "security_settings": "सुरक्षा सेटिंग्स",
+    "address_type": "पता प्रकार"
+  },
+  "components": {
+    "layout": {
+      "create_new_wallet": "नया वॉलेट बनाएं",
+      "send": "भेजें",
+      "connected_sites": "कनेक्टेड साइट्स",
+      "change_language": "भाषा बदलें",
+      "switch_account": "खाता बदलें",
+      "change_address_type": "पता प्रकार बदलें",
+      "create_new_account": "नया खाता बनाएं",
+      "change_password": "पासवर्ड बदलें",
+      "network_settings": "नेटवर्क सेटिंग्स",
+      "receive_crc": "CRC प्राप्त करें",
+      "switch_wallet": "वॉलेट बदलें",
+      "transaction_info": "लेन-देन की जानकारी",
+      "settings": "सेटिंग्स",
+      "show_mnemonic": "म्नेमोनिक दिखाएं",
+      "show_private_key": "प्राइवेट की दिखाएं",
+      "restore_from_mnemonic": "म्नेमोनिक से पुनर्स्थापित करें",
+      "restore_from_private_key": "प्राइवेट की से पुनर्स्थापित करें",
+      "security": "सुरक्षा",
+      "discover": "खोजें",
+      "inscriptions": "इंस्क्रिप्शन्स",
+      "wallet_settings": "वॉलेट सेटिंग्स"
+    },
+    "check_password": {
+      "incorrect_password_error": "गलत पासवर्ड",
+      "password": "पासवर्ड",
+      "continue": "जारी रखें"
+    },
+    "password_input": {
+      "should_be_more_than_1_symbol": "1 से अधिक अक्षर होना चाहिए",
+      "should_be_less_than_70_symbols": "70 से कम अक्षर होने चाहिए"
+    },
+    "rename": {
+      "enter_new_name": "नया नाम दर्ज करें",
+      "minimum_length": "न्यूनतम लंबाई 1 है",
+      "maximum_length": "अधिकतम लंबाई 16 है",
+      "name_is_required": "नाम आवश्यक है",
+      "save": "सहेजें",
+      "rename": "नाम बदलें"
+    },
+    "card": {
+      "close": "बंद करें",
+      "root_account": "रूट खाता"
+    },
+    "inscription_card": {
+      "modal_title": "इंस्क्रिप्शन",
+      "id": "आईडी",
+      "address": "पता",
+      "outputValue": "आउटपुट मूल्य",
+      "content": "सामग्री",
+      "contentLength": "सामग्री की लंबाई",
+      "contentType": "सामग्री का प्रकार",
+      "timeStamp": "समय",
+      "genesisHeight": "जेनेसिस ऊंचाई",
+      "genesisFee": "जेनेसिस शुल्क",
+      "genesisTransaction": "जेनेसिस लेन-देन",
+      "location": "स्थान",
+      "output": "आउटपुट",
+      "offset": "ऑफसेट",
+      "preview": "पूर्वावलोकन"
+    },
+    "token_card": {
+      "transferable_balance": "हस्तांतरणीय बैलेंस",
+      "balance": "बैलेंस",
+      "create_transfer": "ट्रांसफर बनाएं",
+      "send": "भेजें",
+      "no_transfers": "कोई ट्रांसफर नहीं"
+    }
+  },
+  "change_password": {
+    "old_password": "पुराना पासवर्ड",
+    "new_password": "नया पासवर्ड",
+    "confirm_password": "पासवर्ड की पुष्टि करें",
+    "change_password": "पासवर्ड बदलें",
+    "errors": {
+      "incorrect_password": "गलत पासवर्ड",
+      "passwords_do_not_match": "पासवर्ड मेल नहीं खाते"
+    }
+  },
+  "connected_sites": {
+    "no_sites_message": "आपने अभी तक कोई साइट कनेक्ट नहीं की है"
+  },
+  "create_password": {
+    "password": "पासवर्ड",
+    "confirm_password": "पासवर्ड की पुष्टि करें",
+    "create_password": "पासवर्ड बनाएं"
+  },
+  "login": {
+    "password": "पासवर्ड",
+    "login": "लॉग इन",
+    "welcome_back": "वापसी पर स्वागत है"
+  },
+  "new_account": {
+    "max_length_error": "अधिकतम नाम लंबाई 16 है",
+    "name_taken_error": "इस खाते के लिए नाम पहले से लिया गया है",
+    "account_created_message": "नया खाता बनाया गया",
+    "enter_name_label": "नाम दर्ज करें:",
+    "create_new_account": "नया खाता बनाएं"
+  },
+  "new_wallet": {
+    "new_mnemonic_label": "नया म्नेमोनिक",
+    "restore_mnemonic_label": "म्नेमोनिक पुनर्स्थापित करें",
+    "restore_from_private_key_label": "प्राइवेट की से पुनर्स्थापित करें",
+    "restore_from_label": "पुनर्स्थापित करें",
+    "step_1": "चरण 1",
+    "step_2": "चरण 2",
+    "continue": "जारी रखें",
+    "new_mnemonic": {
+      "error_phrase_blank": "म्नेमोनिक वाक्यांश खाली है",
+      "warning": "यदि आप ये शब्द खो देते हैं, तो आप अपना खोया हुआ खाता कभी पुनर्प्राप्त नहीं कर पाएंगे",
+      "i_saved_this_phrase": "मैंने इस वाक्यांश को सहेज लिया है",
+      "copy": "कॉपी करें"
+    },
+    "restore_mnemonic": {
+      "incomplete_phrase_error": "कृपया सभी शब्द डालें",
+      "invalid_words_error": "शब्द अमान्य हैं",
+      "show_root_acc": "लेगेसी डेरिवेशन का उपयोग करें"
+    },
+    "restore_private": {
+      "private_key": "प्राइवेट की",
+      "recover": "पुनर्प्राप्त करें",
+      "invalid_private_key_error": "अमान्य प्राइवेट की"
+    },
+    "hd_path": "एचडी पाथ"
+  },
+  "receive": {
+    "click_to_copy": "कॉपी करने के लिए क्लिक करें",
+    "copy_address": "पता कॉपी करें"
+  },
+  "send": {
+    "confirm_send": {
+      "to_addrses": "पता पर",
+      "from_address": "पता से",
+      "amount": "राशि",
+      "fee": "शुल्क",
+      "included": "शामिल",
+      "not_included": "शामिल नहीं",
+      "confirm": "पुष्टि करें",
+      "inscription_id": "इंस्क्रिप्शन आईडी"
+    },
+    "create_send": {
+      "minimum_amount_error": "न्यूनतम राशि 0.00000001 CRC है",
+      "fee_exceeds_amount_error": "शुल्क राशि से अधिक है",
+      "address_error": "प्राप्तकर्ता का पता डालें",
+      "not_enough_money_error": "आपके खाते में पर्याप्त धन नहीं है",
+      "not_enough_fee_error": "शुल्क बढ़ाएं",
+      "fee_is_text_error": "शुल्क पूर्णांक होना चाहिए",
+      "default_error": "त्रुटि हुई है",
+      "address": "पता",
+      "amount": "राशि",
+      "amount_to_send": "भेजने की राशि",
+      "max_amount": "अधिकतम",
+      "fee_label": "शुल्क",
+      "include_fee_in_the_amount_label": "राशि में शुल्क शामिल करें",
+      "save_address_for_the_next_payments_label": "अगले भुगतानों के लिए पता सहेजें",
+      "continue": "जारी रखें",
+      "fee_input": {
+        "fast": "तेज",
+        "slow": "धीमा",
+        "custom": "कस्टम"
+      },
+      "address_input": {
+        "address_book": "पता पुस्तिका",
+        "address_placeholder": "प्राप्तकर्ता का पता"
+      },
+      "address_book": {
+        "address_book": "पता पुस्तिका",
+        "no_addresses": "यहां कोई पते नहीं हैं",
+        "enter_address": "पता दर्ज करें"
+      }
+    },
+    "finalle_send": {
+      "success": "सफल",
+      "explorer": "एक्सप्लोरर",
+      "back": "वापस",
+      "rebroadcast_transaction": "लेन-देन पुनः प्रसारित करें",
+      "successfully_rebroadcasted": "लेन-देन सफलतापूर्वक पुनः प्रसारित किया गया"
+    }
+  },
+  "switch_account": {
+    "name_already_taken_error": "यह नाम पहले से लिया गया है",
+    "copy_address": "पता कॉपी करें",
+    "rename_account": "खाता नाम बदलें",
+    "export_private_key": "प्राइवेट की निर्यात करें",
+    "show_pk": {
+      "copy": "कॉपी करें"
+    }
+  },
+  "switch_wallet": {
+    "rename_wallet": "वॉलेट का नाम बदलें",
+    "show_mnemonic_private_key": "म्नेमोनिक दिखाएं",
+    "last_wallet_error": "आप अपना अंतिम वॉलेट नहीं हटा सकते",
+    "remove_wallet": "वॉलेट हटाएं",
+    "are_you_sure": "क्या आप वाकई हटाना चाहते हैं?",
+    "yes": "हां",
+    "no": "नहीं",
+    "copy": "कॉपी करें"
+  },
+  "transaction_info": {
+    "txid": "लेन-देन आईडी",
+    "confirmations_label": "पुष्टिकरण",
+    "confirmed": "पुष्टि की गई",
+    "unconfirmed": "अपुष्ट",
+    "fee_label": "शुल्क",
+    "value_label": "मूल्य",
+    "open_in_explorer": "एक्सप्लोरर में खोलें",
+    "copied": "कॉपी किया गया",
+    "inputs": "इनपुट",
+    "outputs": "आउटपुट",
+    "details": "विवरण",
+    "your_address": "आप"
+  },
+  "hooks": {
+    "transaction": {
+      "insufficient_balance_0": "अपर्याप्त बैलेंस। गैर-इंस्क्रिप्शन बैलेंस",
+      "insufficient_balance_1": "CRC) इससे कम है",
+      "insufficient_balance_2": "CRC",
+      "too_many_utxos": "बहुत सारे UTXOs। आपको उन्हें समेकित करना होगा या कम राशि भेजनी होगी",
+      "too_long_mempool_chain": "बहुत लंबी मेमपूल चेन। आपको पुष्टि होने तक प्रतीक्षा करनी होगी"
+    },
+    "wallet": {
+      "last_wallet_error": "आप अपना अंतिम वॉलेट नहीं हटा सकते"
+    }
+  },
+  "advanced": {
+    "root_acc_warning": "लेगेसी डेरिवेशन का उपयोग करें",
+    "blank": "आपके वॉलेट प्रकार के लिए यहां कुछ नहीं है"
+  },
+  "inscription_details": {
+    "content_length": "सामग्री की लंबाई",
+    "status.block_height": "ब्लॉक ऊंचाई",
+    "content_type": "सामग्री का प्रकार",
+    "genesis": "जेनेसिस",
+    "preview": "पूर्वावलोकन",
+    "content": "सामग्री",
+    "offset": "ऑफसेट",
+    "owner": "मालिक",
+    "value": "मूल्य",
+    "outpoint": "आउटपॉइंट",
+    "inscription_id": "इंस्क्रिप्शन आईडी",
+    "status.block_time": "समय",
+    "title": "इंस्क्रिप्शन",
+    "inscription_number": "इंस्क्रिप्शन संख्या"
+  },
+  "inscriptions": {
+    "inscription_not_found": "इंस्क्रिप्शन नहीं मिला",
+    "tokens_not_found": "टोकन नहीं मिले",
+    "inscription_search_placeholder": "संख्या/इंस्क्रिप्शन आईडी",
+    "token_search_placeholder": "टोकन नाम",
+    "mint_token_modal_title": "ट्रांसफर टोकन मिंट करें",
+    "send_token_modal_title": "टोकन भेजें",
+    "amount_to_mint": "मिंट करने की राशि",
+    "transfers_count": "ट्रांसफर की संख्या",
+    "amount_is_text_error": "राशि पूर्णांक होनी चाहिए",
+    "transfer_count_is_text_error": "ट्रांसफर संख्या पूर्णांक होनी चाहिए",
+    "amount_cannot_be_fractional": "राशि भिन्नात्मक नहीं हो सकती",
+    "transfer_countcannot_be_fractional": "ट्रांसफर संख्या भिन्नात्मक नहीं हो सकती",
+    "amount_exceeds_balance": "राशि बैलेंस से अधिक है",
+    "transfer_inscribed": "ट्रांसफर सफलतापूर्वक मिंट किया गया",
+    "failed_inscribe_transfer": "ट्रांसफर नहीं बन सका",
+    "failed_inscribe_transfer2": "ये लेन-देन बाद में भेजे जाएंगे",
+    "choose_transfer": "भेजने के लिए ट्रांसफर चुनें",
+    "total_amount": "कुल राशि",
+    "0_selected_inscriptions_error": "0 चयनित इंस्क्रिप्शन",
+    "success_send_transfer": "ट्रांसफर सफलतापूर्वक भेजा गया",
+    "failed_send_transfer": "ट्रांसफर नहीं भेजा जा सका",
+    "inscribe": "मिंट करें",
+    "transfer": "ट्रांसफर",
+    "not_enough_balance": "पर्याप्त बैलेंस नहीं है",
+    "not_enough_token_balance": "टोकन बैलेंस पर्याप्त नहीं है",
+    "minimum_transfer_count": "न्यूनतम ट्रांसफर संख्या 1 है",
+    "minimum_amount_error": "न्यूनतम टोकन राशि 1 है",
+    "input_amount_first": "पहले राशि डालें",
+    "tick_is_not_set": "टिक परिभाषित नहीं है"
+  },
+  "provider": {
+    "sign_tx": "लेन-देन पर हस्ताक्षर करें",
+    "sign_message": "संदेश पर हस्ताक्षर करें",
+    "you_are_signing": "आप हस्ताक्षर कर रहे हैं",
+    "resolve": "हल करें",
+    "reject": "अस्वीकार करें",
+    "sign_request": "हस्ताक्षर अनुरोध",
+    "send_crc": "CRC भेजें",
+    "sign": "हस्ताक्षर करें",
+    "create_transaction": "लेन-देन बनाएं",
+    "connecting": "कनेक्ट हो रहा है",
+    "connect": "कनेक्ट करें",
+    "access_required": "पहुंच आवश्यक है",
+    "to_address": "पता पर",
+    "connecting_account": "खाता कनेक्ट हो रहा है",
+    "warning": "चेतावनी",
+    "anyone_can_pay_warning": "इस इनपुट में SIGHASH_SINGLE | ANYONECANPAY फ्लैग है",
+    "multi_psbt_sign": "लेन-देन पर हस्ताक्षर करें",
+    "fee": "शुल्क",
+    "switch": "बदलें",
+    "switch_network": "वेबसाइट चाहती है कि आप अपना नेटवर्क बदलें",
+    "switch_network_title": "नेटवर्क बदलें",
+    "switch_network_request": "नेटवर्क बदलने का अनुरोध"
+  }
+}
