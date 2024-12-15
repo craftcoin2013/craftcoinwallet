@@ -71,28 +71,74 @@ class ApiController implements IApiController {
     address: string,
     amount?: number
   ): Promise<ApiUTXO[] | undefined> {
-    let res;
-
-    if (amount) {
-      res = await fetch(`${API_URL}/address/${address}/fetch-utxos/${amount}`);
-    } else {
-      res = await fetch(`${API_URL}/address/${address}/utxo`);
-    }
+    let res = await fetch(`${API_URL}/address/${address}/utxo`);
 
     if (!res.ok) return undefined;
 
     const utxos = await res.json();
     if (!utxos || !Array.isArray(utxos)) return undefined;
 
-    const utxosWithHex: ApiUTXO[] = await Promise.all(
-      utxos.map(async (utxo) => {
-        return {
-          txid: utxo.txid,
-          vout: utxo.vout,
-          status: utxo.status,
-          value: utxo.value,
-          hex: utxo.raw,
-        };
+    const utxosWithoutHex: ApiUTXO[] = utxos.map((utxo) => ({
+      txid: utxo.txid,
+      vout: utxo.vout,
+      status: utxo.status,
+      value: utxo.value,
+      hex: undefined
+    }));
+
+    if (amount) {
+      let MatchedUTXOsAmount: ApiUTXO[] = [];
+      let BalanceTrack = 0;
+
+      const sortedUtxos = [...utxosWithoutHex].sort((a, b) => b.value - a.value);
+
+      for (const utxo of sortedUtxos) {
+        MatchedUTXOsAmount.push(utxo);
+        BalanceTrack += utxo.value;
+        
+        // Break if we have enough balance
+        if (BalanceTrack >= amount) break;
+      }
+
+      // Return undefined if we don't have enough balance
+      if (BalanceTrack < amount) return undefined;
+
+      // fetch hex data
+      const utxosWithHex = await Promise.all(
+        MatchedUTXOsAmount.map(async (utxo) => {
+          try {
+            const res = await fetch(`${API_URL}/tx/${utxo.txid}/hex`);
+            if (!res.ok) return utxo;
+            const hex = await res.text();
+            return {
+              ...utxo,
+              hex
+            };
+          } catch (error) {
+            console.error(`Failed to fetch hex for txid ${utxo.txid}:`, error);
+            return utxo;
+          }
+        })
+      );
+
+      return utxosWithHex;
+    }
+
+    // fetch hex for all UTXOs
+    const utxosWithHex = await Promise.all(
+      utxosWithoutHex.map(async (utxo) => {
+        try {
+          const res = await fetch(`${API_URL}/tx/${utxo.txid}/hex`);
+          if (!res.ok) return utxo;
+          const hex = await res.text();
+          return {
+            ...utxo,
+            hex
+          };
+        } catch (error) {
+          console.error(`Failed to fetch hex for txid ${utxo.txid}:`, error);
+          return utxo;
+        }
       })
     );
 
@@ -161,17 +207,19 @@ class ApiController implements IApiController {
   }
 
   async getCRCPrice() {
-    const res = await fetch('https://explorer.craftcoin.info/ext/getcurrentprice');
-    
+    const res = await fetch(
+      "https://explorer.craftcoin.info/ext/getcurrentprice"
+    );
+
     if (!res.ok) {
       return undefined;
     }
-  
-    const data = await res.json() as {
-      last_price_usdt: number;  
+
+    const data = (await res.json()) as {
+      last_price_usdt: number;
       last_price_usd: number;
     };
-  
+
     return {
       usd: data.last_price_usdt,
     };
@@ -225,11 +273,14 @@ class ApiController implements IApiController {
   }
 
   async getTransactionHex(txid: string) {
-    return await this.fetch<string>({
-      path: "/tx/" + txid + "/hex",
-      json: false,
-      service: "content",
-    });
+    try {
+      const res = await fetch(`${API_URL}/tx/${txid}/hex`);
+      if (!res.ok) return undefined;
+      return await res.text();
+    } catch (error) {
+      console.error(`Failed to fetch hex for txid ${txid}:`, error);
+      return undefined;
+    }
   }
 
   async getUtxoValues(outpoints: string[]) {
