@@ -3,6 +3,7 @@ import ru from "./languages/ru.json";
 import ch from "./languages/ch.json";
 import kr from "./languages/kr.json";
 import vi from "./languages/vi.json";
+import de from "./languages/de.json";
 import i18n from "i18next";
 
 export const defaultNS = "  ";
@@ -23,6 +24,9 @@ export const resources = {
   vi: {
     translation: vi,
   },
+  de: {
+    translation: de,
+  },
 };
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -38,7 +42,7 @@ export const isRTL = false;
 
 export function getLanguages() {
   return {
-    de: "German",
+    de: "Deutsch",
     el: "Greek",
     en: "English",
     es: "Spanish",

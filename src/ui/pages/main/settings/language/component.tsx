@@ -22,6 +22,7 @@ const Language = () => {
   return (
     <div className={s.languages}>
       <Tile label="English" onClick={newLanguage("en")} />
+      <Tile label="Deutsch" onClick={newLanguage("de")} />
       <Tile label="Русский" onClick={newLanguage("ru")} />
       <Tile label="中文" onClick={newLanguage("ch")} />
       <Tile label="한국어" onClick={newLanguage("kr")} />
