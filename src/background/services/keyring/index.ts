@@ -210,7 +210,7 @@ class KeyringService {
           scriptPk: scriptPk.toString("hex"),
           addressType: wallet?.addressType,
           address: account.address!,
-          rawHex: v.hex,
+
           ords: [],
         };
       }),

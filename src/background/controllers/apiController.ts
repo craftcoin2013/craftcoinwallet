@@ -83,19 +83,21 @@ class ApiController implements IApiController {
       vout: utxo.vout,
       status: utxo.status,
       value: utxo.value,
-      hex: undefined
+      hex: undefined,
     }));
 
     if (amount) {
       let MatchedUTXOsAmount: ApiUTXO[] = [];
       let BalanceTrack = 0;
 
-      const sortedUtxos = [...utxosWithoutHex].sort((a, b) => b.value - a.value);
+      const sortedUtxos = [...utxosWithoutHex].sort(
+        (a, b) => b.value - a.value
+      );
 
       for (const utxo of sortedUtxos) {
         MatchedUTXOsAmount.push(utxo);
         BalanceTrack += utxo.value;
-        
+
         // Break if we have enough balance
         if (BalanceTrack >= amount) break;
       }
@@ -103,46 +105,11 @@ class ApiController implements IApiController {
       // Return undefined if we don't have enough balance
       if (BalanceTrack < amount) return undefined;
 
-      // fetch hex data
-      const utxosWithHex = await Promise.all(
-        MatchedUTXOsAmount.map(async (utxo) => {
-          try {
-            const res = await fetch(`${API_URL}/tx/${utxo.txid}/hex`);
-            if (!res.ok) return utxo;
-            const hex = await res.text();
-            return {
-              ...utxo,
-              hex
-            };
-          } catch (error) {
-            console.error(`Failed to fetch hex for txid ${utxo.txid}:`, error);
-            return utxo;
-          }
-        })
-      );
-
-      return utxosWithHex;
+      return MatchedUTXOsAmount;
     }
 
     // fetch hex for all UTXOs
-    const utxosWithHex = await Promise.all(
-      utxosWithoutHex.map(async (utxo) => {
-        try {
-          const res = await fetch(`${API_URL}/tx/${utxo.txid}/hex`);
-          if (!res.ok) return utxo;
-          const hex = await res.text();
-          return {
-            ...utxo,
-            hex
-          };
-        } catch (error) {
-          console.error(`Failed to fetch hex for txid ${utxo.txid}:`, error);
-          return utxo;
-        }
-      })
-    );
-
-    return utxosWithHex;
+    return utxosWithoutHex;
   }
 
   async pushTx(txHex: string) {
